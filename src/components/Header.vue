@@ -12,12 +12,12 @@
       <div v-if="user !== null">
         <span class="text-success">歡迎回來! {{ user.name }}</span>
         <router-link
-          v-if="user.roles !== admin"
+          v-if="user.roles === 'admin'"
           class="p-2 text-dark"
           to="/admin/products"
         >
           管理台 </router-link
-        >/
+        >
         <a href="#" class="p-2 text-danger" @click.prevent="logout">登出</a>
       </div>
       <div v-else>
