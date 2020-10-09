@@ -37,7 +37,6 @@ export function newProduct(data) {
       unit: data.unit,
       origin_price: data.origin_price,
       description: data.description,
-
     }
   });
 }
@@ -48,7 +47,7 @@ export function updateProduct(data) {
     url: `admin/products`,
     method: "put",
     data: {
-      id:ppid,
+      ppid: data.ppid,
       name: data.name,
       count: data.count,
       price: data.price,

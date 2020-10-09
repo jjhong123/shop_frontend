@@ -115,7 +115,7 @@
                     placeholder="請輸入標題"
                   />
                 </div>
-
+    
                 <div class="form-row">
                   <div class="form-group col-md-12">
                     <label for="price">原價</label>
@@ -386,7 +386,7 @@ export default {
       formData.append("photo", uploadedFile);
       formData.append("id", vm.tempProduct.id);
 
-      const url = `https://f3974a8832d8.ngrok.io/github/shop_backend/public/api/v1/admin/products/uploadimg`;
+      const url = `http://f3974a8832d8.ngrok.io/github/shop_backend/public/api/v1/admin/products/uploadimg`;
       vm.status.fileUploading = true;
       axios
         .post(url, formData, {
