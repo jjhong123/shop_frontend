@@ -32,7 +32,12 @@ export function newProduct(data) {
       count: data.count,
       price: data.price,
       status: data.status,
-      description: data.description
+      category: data.category,
+      content: data.content,
+      unit: data.unit,
+      origin_price: data.origin_price,
+      description: data.description,
+
     }
   });
 }
@@ -43,11 +48,16 @@ export function updateProduct(data) {
     url: `admin/products`,
     method: "put",
     data: {
-      id: data.id,
+      id:ppid,
       name: data.name,
       count: data.count,
+      price: data.price,
       status: data.status,
-      description: data.description
+      category: data.category,
+      content: data.content,
+      unit: data.unit,
+      origin_price: data.origin_price,
+      description: data.description,
     }
   });
 }

@@ -26,7 +26,7 @@
           <td class="text-right">{{ item.price }}</td>
           <td class="text-right">{{ item.count }}</td>
           <td style="text-align: center">
-            <span v-if="item.status===1" class="badge badge-success"
+            <span v-if="item.status === 1" class="badge badge-success"
               >啟用</span
             >
             <span v-else class="badge badge-light">未啟用</span>
@@ -118,13 +118,26 @@
 
                 <div class="form-row">
                   <div class="form-group col-md-12">
-                    <label for="origin_price">原價</label>
+                    <label for="price">原價</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="price"
+                      v-model="tempProduct.price"
+                      placeholder="請輸入原價"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="origin_price">售價</label>
                     <input
                       type="number"
                       class="form-control"
                       id="origin_price"
-                      v-model="tempProduct.price"
-                      placeholder="請輸入原價"
+                      v-model="tempProduct.origin_price"
+                      placeholder="請輸入售價"
                     />
                   </div>
                 </div>
@@ -138,6 +151,45 @@
                       id="origin_price"
                       v-model="tempProduct.count"
                       placeholder="請輸入數量"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="unit">單位</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="unit"
+                      v-model="tempProduct.unit"
+                      placeholder="請輸入單位"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="category">分類</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="category"
+                      v-model="tempProduct.category"
+                      placeholder="請輸入分類"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-12">
+                    <label for="content">產品說明</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="content"
+                      v-model="tempProduct.content"
+                      placeholder="請輸入產品說明"
                     />
                   </div>
                 </div>
