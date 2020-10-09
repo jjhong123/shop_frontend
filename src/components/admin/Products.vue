@@ -384,7 +384,7 @@ export default {
       const vm = this;
       const formData = new FormData();
       formData.append("photo", uploadedFile);
-      formData.append("id", vm.tempProduct.id);
+      formData.append("ppid", vm.tempProduct.ppid);
 
       const url = `http://f3974a8832d8.ngrok.io/github/shop_backend/public/api/v1/admin/products/uploadimg`;
       vm.status.fileUploading = true;
