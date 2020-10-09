@@ -334,7 +334,7 @@ export default {
       formData.append("photo", uploadedFile);
       formData.append("id", vm.tempProduct.id);
 
-      const url = `http://localhost/shop/public/api/v1/admin/products/uploadimg`;
+      const url = `https://f3974a8832d8.ngrok.io/github/shop_backend/public/api/v1/admin/products/uploadimg`;
       vm.status.fileUploading = true;
       axios
         .post(url, formData, {
